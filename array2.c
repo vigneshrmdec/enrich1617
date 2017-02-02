@@ -15,7 +15,7 @@ for(i=0;i<num;i++)
   {
     if(a[i]==search)
       {
-        b[j]=a[i];
+        b[j]=i;
         j++;
       }
   }
