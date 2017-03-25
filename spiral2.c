@@ -2,26 +2,20 @@
 
 int main(void)
 {
-    int n;
+    int n,sign=-1;
     scanf("%d",&n);    
 	int a[n][n],i,j=0,k=1;
 	for(i=0;i<n;i++)
 	  {
-	      while(j<n)
+	      sign=-sign;
+	      while((j<n)&&(j>=0))
 	      {
 	          a[i][j]=k;
-	          j++;
+	          j+=sign;
 	          k++;
 	      }
-	      j--;i++;
-	      while(j>=0)
-	      {
-	          a[i][j]=k;
-	          j--;
-	          k++;
-	      }
-	      j++;
-	  }
+	      j=j-sign;
+	 }
 	  for(i=0;i<n;i++)
 	  {
 	    for(j=0;j<n;j++)
